@@ -32,6 +32,8 @@ class AppCoordinatorImpl: AppCoordinatorProtocol {
             MainMenuView()
         case .camera:
             SpellingView()
+        case .pressentation:
+            PresentationView()
         }
     }
 }

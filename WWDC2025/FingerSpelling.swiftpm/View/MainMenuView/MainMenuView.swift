@@ -17,10 +17,11 @@ struct MainMenuView: View {
             
             VStack {
                 Text("FingerSpelling")
+                    .font(Font.custom("Poppins-Regular", size: 32, relativeTo: .title))
                     .foregroundStyle(.black)
                     .onTapGesture {
                         withAnimation {
-                            appCoordinator.push(.camera)
+                            appCoordinator.push(.pressentation)
                         }
                     }
             }

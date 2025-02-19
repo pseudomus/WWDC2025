@@ -9,6 +9,7 @@ import SwiftUI
 
 enum Screen: Identifiable, Hashable {
     case home
+    case pressentation
     case camera
     
     var id: Self { return self }
