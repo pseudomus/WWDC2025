@@ -13,18 +13,26 @@ struct MainMenuView: View {
     
     var body: some View {
         ZStack {
-            Color.white
+            
+            
+            Image("MainBack")
             
             VStack {
-                Text("FingerSpelling")
-                    .font(Font.custom("Poppins-Regular", size: 32, relativeTo: .title))
-                    .foregroundStyle(.black)
+                Spacer()
+                
+                TitleComponent()
+                    .padding(60)
+                
+                Image("StartButton")
                     .onTapGesture {
                         withAnimation {
                             appCoordinator.push(.pressentation)
                         }
                     }
+                    .padding(200)
+                Spacer()
             }
-        }.ignoresSafeArea()
+        }
+        .ignoresSafeArea()
     }
 }

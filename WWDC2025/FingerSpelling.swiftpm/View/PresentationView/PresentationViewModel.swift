@@ -8,15 +8,5 @@
 import Foundation
 
 class PresentationViewModel: ObservableObject {
-    @Published var index:Int = 0
-    var presentations:[SceneModel] =
-    [
-        SceneModel(text: "teste", buttonText: "Avançar"),
-        SceneModel(text: "teset2", buttonText: "Avançar")
-    ]
-    var last:Int
     
-    init() {
-        last = presentations.count - 1
-    }
 }

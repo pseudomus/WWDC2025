@@ -13,26 +13,10 @@ struct PresentationView: View {
     @StateObject var vm: PresentationViewModel = PresentationViewModel()
     
     var body: some View {
-        VStack{
-            if let image = vm.presentations[vm.index].image{
-                image
-                    .resizable()
-                    .scaledToFit()
-            }
-            Text(vm.presentations[vm.index].text)
-            
-            Button{
-                if vm.index < vm.presentations.count - 1{
-                    withAnimation {
-                        vm.index += 1
-                    }
-                } else {
-                    appCoordinator.push(.camera)
-                }
-            }label: {
-                Text(vm.presentations[vm.index].buttonText)
-            }
-            
-        }.navigationBarBackButtonHidden(true)
+        ZStack{
+            Color.white
+        }
+        .ignoresSafeArea()
+        .navigationBarBackButtonHidden(true)
     }
 }
