@@ -13,10 +13,21 @@ struct PresentationView: View {
     @StateObject var vm: PresentationViewModel = PresentationViewModel()
     
     var body: some View {
-        ZStack{
-            Color.white
-        }
-        .ignoresSafeArea()
-        .navigationBarBackButtonHidden(true)
+        
+        
+        VStack{
+            switch vm.state {
+            case .Explanation:
+                ExplanationView(array: vm.imageNames,text: vm.explanationText) {
+                    withAnimation{
+                        vm.state = .Action
+                    }
+                }
+            case .Action:
+                ActionView(text: vm.actionText) {
+                    appCoordinator.push(.camera)
+                }
+            }
+        }.navigationBarBackButtonHidden(true)
     }
 }

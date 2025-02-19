@@ -36,11 +36,11 @@ class CameraModel:NSObject, ObservableObject {
         case .notDetermined:
             AVCaptureDevice.requestAccess(for: .video) { (autorized) in
                 if !autorized{
-                    fatalError()
+                    self.checkPermission()
                 }
             }
         default:
-            fatalError()
+            self.checkPermission()
         }
     }
     

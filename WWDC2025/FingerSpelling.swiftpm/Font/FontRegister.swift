@@ -10,7 +10,10 @@ import SwiftUI
 public struct MyFont {
     public static func registerFonts() {
         registerFont(bundle: Bundle.main , fontName: "Poppins-Black", fontExtension: ".ttf")
-         registerFont(bundle: Bundle.main , fontName: "Poppins-Regular", fontExtension: ".ttf")
+        registerFont(bundle: Bundle.main , fontName: "Poppins-Regular", fontExtension: ".ttf")
+        registerFont(bundle: Bundle.main , fontName: "Poppins-Bold", fontExtension: ".ttf")
+        registerFont(bundle: Bundle.main , fontName: "Poppins-Medium", fontExtension: ".ttf")
+        registerFont(bundle: Bundle.main , fontName: "Poppins-SemiBold", fontExtension: ".ttf")
         //change according to your ext.
     }
     fileprivate static func registerFont(bundle: Bundle, fontName: String, fontExtension: String) {

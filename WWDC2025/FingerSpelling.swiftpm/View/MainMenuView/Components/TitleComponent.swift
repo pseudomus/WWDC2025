@@ -12,11 +12,11 @@ struct TitleComponent: View {
         VStack{
             HStack{
                 Text("Finger")
-                    .font(Font.custom("Poppins-Regular", size: 75, relativeTo: .title))
+                    .font(Font.custom("Poppins-Medium", size: 75, relativeTo: .title))
                     .foregroundStyle(Color("Title1"))
                     .padding(.trailing, 0)
                 Text("Spelling")
-                    .font(Font.custom("Poppins-Black", size: 75, relativeTo: .title))
+                    .font(Font.custom("Poppins-Bold", size: 75, relativeTo: .title))
                     .foregroundStyle(Color("Title2"))
                     .padding(.leading, 0)
                     .offset(x: -8 , y: 0)
