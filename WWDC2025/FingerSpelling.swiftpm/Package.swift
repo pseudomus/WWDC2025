@@ -40,7 +40,8 @@ let package = Package(
             name: "AppModule",
             path: ".",
             resources: [
-                .process("Resources")
+                .process("Resources"),
+                .copy("MLFile/FingerSpellingModel.mlmodelc")
             ]
         )
     ],
