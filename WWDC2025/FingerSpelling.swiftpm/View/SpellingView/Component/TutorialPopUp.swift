@@ -16,7 +16,7 @@ struct TutorialPopUp: View {
             VStack{
                
                 Text("""
-                     • Make sure your hand is fully visible to the camera
+                     • Make sure your hand is fully visible and close to the camera
                      
                      • A word will appear at the top of the screen, and below it, you’ll see the fingerspelling sign to replicate.
 

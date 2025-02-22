@@ -54,13 +54,13 @@ struct SpellingView: View {
                 }
             }
             
-            VStack {
-                Spacer()
-                Text("Prediction: \(model.prediction)")
-                    .padding(20)
-                    .foregroundStyle(.black)
-                    .background(RoundedRectangle(cornerRadius: 20).foregroundStyle(.white))
-            }
+//            VStack {
+//                Spacer()
+//                Text("Prediction: \(model.prediction)")
+//                    .padding(20)
+//                    .foregroundStyle(.black)
+//                    .background(RoundedRectangle(cornerRadius: 20).foregroundStyle(.white))
+//            }
             
             if model.showTutorial == true{
                 TutorialPopUp {

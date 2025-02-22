@@ -26,7 +26,7 @@ struct PopUp: View {
                         .foregroundStyle(Color("Title2"))
                         .frame(width: 400, height: 15, alignment: .leading)
                         .padding()
-                        .padding(.top, 40)
+                        .padding(.top, 20)
                 }
                 
                 VStack{
@@ -35,7 +35,7 @@ struct PopUp: View {
                         .font(Font.custom("Poppins-Bold", size: 24, relativeTo: .title))
                         .foregroundStyle(Color("Title1"))
                         .frame(width: 370, height: 65, alignment: .leading)
-                        
+                    
                     
                     Text(text)
                         .multilineTextAlignment(.leading)
@@ -45,6 +45,7 @@ struct PopUp: View {
                 }
             }
             .padding(30)
+            .frame(width: 477, height: 500)
             
             switch symbol {
                 
@@ -76,13 +77,13 @@ struct PopUp: View {
                 action()
             }label: {
                 Image("NextButton")
-                    .padding(30)
+                    .padding(10)
             }
         }
         .background {
             RoundedRectangle(cornerRadius: 40)
-                .frame(width: 477, height: 700)
-                .foregroundStyle(Color.black)
+                .frame(width: 477, height: 730)
+                .foregroundStyle(Color.white)
             
         }
     }
@@ -90,10 +91,7 @@ struct PopUp: View {
 
 #Preview {
     PopUp(title: "Cats can understand ASL!", text: """
-            Many Deaf families train their cats to
-            recognize ASL signs, especially for 
-            commands like approaching or 
-            moving to a specific location.
+            Contrary to what many people think, hands are not the main part of sign language. The face is essential for conveying emotions and feelings, beyond just words.
             """,
           symbol: "face.smiling.inverse",action: {print("Preview")}
     )

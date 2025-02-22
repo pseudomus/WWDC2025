@@ -34,8 +34,12 @@ Want to practice again?
                 .frame(width: 400, height: 320, alignment: .leading)
                 .padding(10)
             
-            Image("RestartButton")
-                .padding(.bottom,30)
+            Button{
+                action()
+            }label: {
+                Image("RestartButton")
+                    .padding(.bottom,30)
+            }
         }
         .background {
             RoundedRectangle(cornerRadius: 40)
