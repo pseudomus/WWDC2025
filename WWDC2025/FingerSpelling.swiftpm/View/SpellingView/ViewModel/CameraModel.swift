@@ -14,13 +14,20 @@ class CameraModel: NSObject, ObservableObject {
     @Published var frame: UIImage?
     @Published var showPopUp: Bool = false
     @Published var showEnd: Bool = false
-    var popUpText:[String] = [
+    var popUpText:[PopUpModel] = [
         
-        "Many Deaf families train their cats to recognize ASL signs, especially for commands like approaching or moving to a specific location."
-        ,
-        "Many people think there is only one universal sign language, but each country or region may have its own."
-        ,
-        "Contrary to what many people think, hands are not the main part of sign language. The face is essential for conveying emotions and feelings, beyond just words."
+        PopUpModel(title: "Cats can understand ASL!", message: """
+Many Deaf families train their cats to recognize ASL signs, especially for commands like approaching or moving to a specific location.
+""", symbol: "cat.fill"),
+        
+        PopUpModel(title: "ASL is not universal", message: """
+                    Many people think there is only one universal sign language, but each country or region may have its own.
+                    """, symbol: "cat.fill"),
+        
+        PopUpModel(title: "Hand is only one part of ASL", message: """
+                   Contrary to what many people think, hands are not the main part of sign language. The face is essential for conveying emotions and feelings, beyond just words.
+                   """, symbol: "face.smiling.inverse")
+        
     ]
     private var isProcessing = false
     
@@ -128,19 +135,19 @@ class CameraModel: NSObject, ObservableObject {
         self.captureSession.stopRunning()
     }
     
-    func extractHandKeypoints(from observations: [VNHumanHandPoseObservation]?) -> [CGPoint]? {
-        guard let observations = observations, let firstObservation = observations.first else {
-            return nil
-        }
-        
-        do {
-            let allPoints = try firstObservation.recognizedPoints(.all)
-            return allPoints.map { $0.value.location }
-        } catch {
-            print("Erro ao extrair pontos-chave: \(error)")
-            return nil
-        }
-    }
+//    func extractHandKeypoints(from observations: [VNHumanHandPoseObservation]?) -> [CGPoint]? {
+//        guard let observations = observations, let firstObservation = observations.first else {
+//            return nil
+//        }
+//        
+//        do {
+//            let allPoints = try firstObservation.recognizedPoints(.all)
+//            return allPoints.map { $0.value.location }
+//        } catch {
+//            print("Erro ao extrair pontos-chave: \(error)")
+//            return nil
+//        }
+//    }
     
     func convertToPercentage(_ value: Double) -> String {
         return String(format: "%.1f%%", value * 100)

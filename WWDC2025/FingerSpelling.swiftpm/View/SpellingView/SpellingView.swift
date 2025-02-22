@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SpellingView: View {
     
+    @EnvironmentObject var appCoordinator: AppCoordinatorImpl
     @StateObject private var model = CameraModel()
     
     var body: some View {
@@ -22,13 +23,16 @@ struct SpellingView: View {
                 if model.showTutorial == false {
                     if model.showEnd == true {
                         
-                        Color.black
+                        EndPopUp {
+                            appCoordinator.popToRoot()
+                        }
                         
                         
                     } else {
                         if model.showPopUp == true {
                             
-                            PopUp(text: model.popUpText[model.wordCount], action: {
+                            PopUp(title: model.popUpText[model.wordCount].title
+                                  , text: model.popUpText[model.wordCount].message, symbol: model.popUpText[model.wordCount].symbol, action: {
                                 print("\(model.wordCount)")
                                 if model.wordCount == model.words.count-1 {
                                     print("terminou")

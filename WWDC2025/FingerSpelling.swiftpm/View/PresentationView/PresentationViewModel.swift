@@ -13,9 +13,7 @@ class PresentationViewModel: ObservableObject {
     
     var explanationText: String {
         """
-        Each letter of the alphabet has a specific hand sign, allowing words to be spelled out when there is no designated sign for them.
-
-        This method is especially useful for names, technical terms, and newly created words. Additionally, fingerspelling serves as a bridge between hearing and Deaf individuals, 
+        Each letter of the alphabet has a specific hand sign, allowing words to be spelled out when there is no designated sign for them.This method is especially useful for names, technical terms, and newly created words. 
         """
     }
     
