@@ -22,7 +22,7 @@ Many Deaf families train their cats to recognize ASL signs, especially for comm
         
         PopUpModel(title: "ASL is not universal", message: """
                     Many people think there is only one universal sign language, but each country or region may have its own.
-                    """, symbol: "cat.fill"),
+                    """, symbol: "Hand"),
         
         PopUpModel(title: "Hand is only one part of ASL", message: """
                    Contrary to what many people think, hands are not the main part of sign language. The face is essential for conveying emotions and feelings, beyond just words.

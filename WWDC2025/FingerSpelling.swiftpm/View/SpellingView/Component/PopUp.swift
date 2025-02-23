@@ -64,9 +64,9 @@ struct PopUp: View {
             case "Hand":
                 Image("\(symbol)")
                     .resizable()
-                    .frame(width: 101,height: 86)
+                    .frame(width: 120,height: 86)
                     .foregroundStyle(Color("Symbol"))
-                    .scaledToFill()
+                    .scaledToFit()
                 
             default:
                 Text("Failed to find corresponding asset")

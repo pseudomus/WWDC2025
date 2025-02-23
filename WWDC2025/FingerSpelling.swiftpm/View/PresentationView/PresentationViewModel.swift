@@ -20,8 +20,6 @@ class PresentationViewModel: ObservableObject {
     var actionText: String {
         """
         Fingerspelling is essential in Deaf education and everyday life. It helps Deaf children connect letters and words to signs, making reading and writing easier to learn. It also aids in learning new sign languages and improves communication between Deaf, mute and hearing people.
-
-        For hearing individuals, learning fingerspelling fosters inclusion and accessibility. 
         """
     }
 }

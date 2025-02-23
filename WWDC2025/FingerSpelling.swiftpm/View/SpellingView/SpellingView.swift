@@ -24,6 +24,7 @@ struct SpellingView: View {
                     if model.showEnd == true {
                         
                         EndPopUp {
+                            model.stopSession()
                             appCoordinator.popToRoot()
                         }
                         

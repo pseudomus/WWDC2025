@@ -12,7 +12,7 @@ struct EndPopUp: View {
     var message:String = """
 Now that you’ve seen how possible it is to learn fingerspelling, why not take it further?
 
- You can practice the entire alphabet, learn common expressions, or pick up essential vocabulary to use in your daily life and at work.
+You can practice the entire alphabet, learn common expressions, or pick up essential vocabulary to use in your daily life and at work.
 
 Want to practice again?
 """

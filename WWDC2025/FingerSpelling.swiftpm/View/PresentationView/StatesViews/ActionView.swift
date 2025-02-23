@@ -22,7 +22,7 @@ struct ActionView: View {
                     .padding()
                 Text(text)
                     .font(Font.custom("Poppins-Medium", size: 24, relativeTo: .title))
-                    .multilineTextAlignment(.center)
+                    .multilineTextAlignment(.leading)
                     .foregroundStyle(Color("Text"))
                     .multilineTextAlignment(.center)
                     .padding(30)
